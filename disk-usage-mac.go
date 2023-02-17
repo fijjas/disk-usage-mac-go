@@ -124,7 +124,7 @@ func listDirContents(path string) ([]FsItem, error) {
 		return nil, err
 	}
 
-	results := make([]FsItem, 0, len(dirItems)-1)
+	results := make([]FsItem, 0, len(dirItems))
 
 	for _, dirItem := range dirItems {
 		fullPath := filepath.Join(path, dirItem.Name())
